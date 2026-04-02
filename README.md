@@ -7,3 +7,25 @@
 * Any identified events and traffic information is logged in a database that can be analyzed and accessed via a dashboard. This assists the authorities to track the traffic trends, effectively enforce the rules, and make evidence-based decisions to enhance the road safety.
 
 * In general, the system eliminates manual work, enhances monitoring, and leads to safer and smarter transportation systems.
+
+#Features in this smart road safety monitoring using computer vision
+
+1) Real-Time Vehicle Detection
+
+2) Accident Detection
+
+3) Speed Violation Detection
+
+4) Signal Violation Detection
+
+5) Helmet Detection
+
+6) Pedestrian Detection
+
+7) Real-Time Alerts & Notifications
+
+8) Data Storage & Logging
+
+9) Analytics Dashboard
+
+10) Violation Report Generation
