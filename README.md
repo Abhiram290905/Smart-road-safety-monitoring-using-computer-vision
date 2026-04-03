@@ -29,3 +29,14 @@
 9) Analytics Dashboard
 
 10) Violation Report Generation
+
+#implementation
+
+1) dashboard
+   a) primary user : traffic authorities
+   b) end users    : public
+
+2) sign up page : creating an account according to traffic authorities
+
+3) sign in page : this opens according to the users having differnet dashboard as primary and end users seperarte dashboards
+   
