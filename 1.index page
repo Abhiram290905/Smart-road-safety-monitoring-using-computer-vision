@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Road Safety Monitoring</title>
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-overlay"></div>
+    <div class="container">
+        <div class="header">
+            <div class="logo-container">
+                <div class="icon-box solid-blue">
+                    <i class="ph-fill ph-video-camera"></i>
+                </div>
+                <div class="icon-box outline-blue">
+                    <i class="ph ph-shield"></i>
+                </div>
+            </div>
+            <h1>Smart Road Safety Monitoring</h1>
+            <p class="subtitle">Select your account type to continue</p>
+        </div>
+
+        <div class="cards-container">
+            <!-- Traffic Authorities Card -->
+            <button class="account-card" aria-label="Select Traffic Authorities Account" onclick="handleSelection('traffic')">
+                <div class="card-icon-wrapper traffic-icon-bg">
+                    <i class="ph ph-user-gear traffic-icon-color"></i>
+                </div>
+                <h2>Traffic Authorities</h2>
+            </button>
+
+            <!-- Users Card -->
+            <button class="account-card" aria-label="Select Users Account" onclick="handleSelection('user')">
+                <div class="card-icon-wrapper user-icon-bg">
+                    <div class="user-icon-border">
+                        <i class="ph ph-user user-icon-color"></i>
+                    </div>
+                </div>
+                <h2>Users</h2>
+            </button>
+        </div>
+
+        <div class="footer">
+            <p>Need help? Contact support at <a href="mailto:support@roadsafety.gov.in">support@roadsafety.gov.in</a></p>
+        </div>
+    </div>
+
+    <button class="help-fab" aria-label="Help">
+        <i class="ph ph-question"></i>
+    </button>
+
+    <script>
+        function handleSelection(type) {
+            console.log(`Selected account type: ${type}`);
+            // Add slight click animation or routing logic here
+            const cards = document.querySelectorAll('.account-card');
+            cards.forEach(card => card.style.pointerEvents = 'none'); // prevent double click
+            
+            setTimeout(() => {
+                cards.forEach(card => card.style.pointerEvents = 'auto');
+                if (type === 'traffic') {
+                    window.location.href = 'admin-signin.html';
+                } else {
+                    window.location.href = 'user-signin.html';
+                }
+            }, 300);
+        }
+    </script>
+</body>
+</html>
